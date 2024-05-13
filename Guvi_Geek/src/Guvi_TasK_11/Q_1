@@ -1,0 +1,52 @@
+In Java, there are four access modifiers that control the visibility and accessibility of classes, methods, and variables. These modifiers determine whether a class, method, or variable can be accessed from other classes or packages. Here are the four access modifiers and their significance:
+
+Public (public):
+
+Classes: A public class can be accessed from any other class or package. For example, if a class is declared as public class MyClass, it can be accessed by any other class in any package.
+Methods: A public method can be called from any other class. It is part of the class's public interface. Other classes can create objects of this class and call its public methods.
+Variables: A public variable can be accessed and modified directly from any other class.
+Protected (protected):
+
+Classes: The protected access modifier is not applicable to classes directly.
+Methods: A protected method can be accessed within the same package or subclass (in any package). This means that subclasses can access and override protected methods of their superclass.
+Variables: A protected variable can be accessed within the same package or by subclasses.
+Default (Package-private):
+
+Classes: If no access modifier is specified (also known as "default" or "package-private"), it means the class is accessible only within its own package. Classes without an access specifier have default (package-private) access.
+Methods: A method without any access modifier (default) is accessible within the same package but not from outside the package.
+Variables: Variables without an access modifier (default) can be accessed within the same package but are not accessible from outside the package.
+Private (private):
+
+Classes: The private access modifier is not applicable to classes directly.
+Methods: A private method can only be accessed within the same class. It is not visible or accessible to any other class, including subclasses.
+Variables: A private variable can only be accessed within the same class. Other classes cannot directly access or modify private variables.
+
+// Example of public access modifier
+public class MyClass {
+    public int publicVar;
+    public void publicMethod() {
+        // Code accessible from anywhere
+    }
+}
+
+// Example of protected access modifier
+class Parent {
+    protected void display() {
+        // Code accessible within the same package or by subclasses
+    }
+}
+
+// Example of default (package-private) access modifier
+class PackagePrivateClass {
+    void defaultMethod() {
+        // Code accessible within the same package
+    }
+}
+
+// Example of private access modifier
+class PrivateExample {
+    private int privateVar;
+    private void privateMethod() {
+        // Code accessible only within this class
+    }
+}

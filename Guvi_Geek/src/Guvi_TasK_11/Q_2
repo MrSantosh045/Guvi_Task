@@ -1,0 +1,80 @@
+In Java programming, understanding the difference between exceptions and errors is crucial for effectively handling and managing unexpected situations in your code. Both exceptions and errors represent abnormal conditions that can arise during the execution of a program, but they are used in different contexts and scenarios.
+
+Exceptions:
+Definition:
+
+An exception is an event that disrupts the normal flow of a program's execution. It represents a condition that can be handled by the program.
+In Java, exceptions are represented by objects that are subclasses of java.lang.Exception or its subclasses.
+Types:
+
+Checked Exceptions: These are the exceptions that are checked at compile time. Code that might throw a checked exception must be enclosed in a try-catch block or must declare the exception using throws clause.
+Unchecked Exceptions (Runtime Exceptions): These are exceptions that are not checked at compile time. They typically occur due to programming errors (e.g., null pointer dereference, arithmetic exception) and don't require explicit handling.
+Examples:
+
+FileNotFoundException: Thrown when attempting to access a file that does not exist.
+NullPointerException: Thrown when trying to access an object reference that is null.
+ArithmeticException: Thrown when an arithmetic operation (e.g., division by zero) is performed.
+Handling:
+
+Exceptions can be handled using try-catch blocks to gracefully recover from errors.
+It is encouraged to catch specific exceptions rather than using a generic catch (Exception e) block to handle exceptions more effectively.
+Errors:
+Definition:
+
+An error is an unrecoverable condition that typically cannot be handled by the application. Errors are usually caused by the environment in which the application is running.
+Errors are represented by objects that are subclasses of java.lang.Error.
+Types:
+
+OutOfMemoryError: Thrown when the Java Virtual Machine (JVM) cannot allocate an object because it is out of memory.
+StackOverflowError: Thrown when the execution stack overflows due to excessive recursion.
+Examples:
+
+OutOfMemoryError: Occurs when the JVM cannot allocate more memory for new objects.
+StackOverflowError: Occurs when the call stack grows beyond its limit, typically due to excessive recursion.
+Handling:
+
+Errors are typically not handled programmatically as they indicate serious problems that cannot be resolved by the application logic.
+The JVM may terminate when an error occurs, and it's often necessary to address underlying system or environmental issues causing the error (e.g., allocating more memory).
+Key Differences:
+Recoverability:
+
+Exceptions are recoverable conditions that can be handled programmatically.
+Errors generally indicate serious issues that are beyond the scope of normal application handling.
+Hierarchy:
+
+Exceptions are subclasses of java.lang.Exception.
+Errors are subclasses of java.lang.Error.
+Handling:
+
+Exceptions should be caught and handled using try-catch blocks or propagated using throws declarations.
+Errors are not typically handled programmatically; they are often indicative of severe issues in the runtime environment.
+
+
+Example in Coding
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class ExceptionVsErrorExample {
+
+    public static void main(String[] args) {
+        // Example of catching and handling an exception
+        try {
+            Scanner scanner = new Scanner(new File("nonexistent-file.txt"));
+            while (scanner.hasNextLine()) {
+                System.out.println(scanner.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found: " + e.getMessage());
+        }
+
+        // Example of causing a runtime exception (division by zero)
+        int result = divide(10, 0);
+        System.out.println("Result: " + result); // This line will not be reached due to exception
+    }
+
+    public static int divide(int a, int b) {
+        return a / b; // Throws ArithmeticException if b is 0
+    }
+}
