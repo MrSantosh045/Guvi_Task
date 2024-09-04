@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Evennumber {
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-	
+
 		Scanner obj=new Scanner(System.in);
-		
+
 		System.out.println("Please Enter Any Number - ");
 		int Even=obj.nextInt();
-		
+
 		if (Even % 2==0)
 		{
 			System.out.println("This is Even Number");
@@ -22,6 +22,6 @@ public class Evennumber {
 		}
         obj.close(); // Close the Scanner object
 		}
-		
+
 
 }

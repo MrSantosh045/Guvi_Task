@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Check_palindrome
 {
 
-	
+
 
 	    // Method to check if a string is a Palindrome
 	    public static boolean isPalindrome(String inputString) {
@@ -30,14 +30,14 @@ public class Check_palindrome
 	        return true;
 	    }
 
-	    public static void main(String[] args) 
+	    public static void main(String[] args)
 	    {
 	        // Create a Scanner object to read input from the console
 	        Scanner scanner = new Scanner(System.in);
 
 	        // Prompt the user to enter a string
 	        System.out.print("Enter a string: ");
-	        
+
 	        // Read the input string entered by the user
 	        String userInput = scanner.nextLine();
 

@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Stringlength
 {
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		 // Create a Scanner object to take input from the user
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user to enter a string
         System.out.print("Enter a string: ");
-        
+
         // Read the string input from the user
         String msg = scanner.nextLine();
 
@@ -25,13 +25,13 @@ public class Stringlength
         /* Print the length of the string
 		 *  Given string String msg = "Guvi Geek";
 		 */
-		        
-		                
+
+
 		        // Print the length of the string
 		        System.out.println("Length of the string \"" + msg + "\" is: " + length);
 	}
 }
 
-	
+
 
 

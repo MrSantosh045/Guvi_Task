@@ -17,14 +17,14 @@ public class Factorialcalculator
 				 * variable will hold the factorial of the given number. We start with 1 because
 				 * multiplying by 1 doesn't change the value.
 				 */
-		        for (int i = 2; i <= number; i++) 
+		        for (int i = 2; i <= number; i++)
 		        {
 		            factorial *=i;
 		        }
 
 		        System.out.println(number + "! = " + factorial);
 		    }
-		
+
 
 
 	}

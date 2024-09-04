@@ -18,13 +18,13 @@ public class Swappingnumbers {
 
 		// Now Using 3rd Variable for Swapping Numbers
 
-		
+
 		 	int C=B; B=A; A=C;
-		 
+
 
 			/*
 			 * Swapping value without using 3rd Variable
-			 *  A = A + B; 
+			 *  A = A + B;
 			 *  B = A - B;
 			 *  A = A - B;
 			 */

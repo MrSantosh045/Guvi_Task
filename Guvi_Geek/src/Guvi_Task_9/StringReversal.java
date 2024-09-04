@@ -2,7 +2,7 @@ package Guvi_Task_9;
 import java.util.Scanner;
 
 
-	public class StringReversal 
+	public class StringReversal
 	{
 
 	    // Method to reverse a given string

@@ -32,7 +32,7 @@ public class GradingSystem {
                 grade = "E";
             } else if (marks <= 50 ) {
                 grade = "F";
-                
+
             } else {
                 grade = "Invalid Input"; // Handles any unexpected input
             }
